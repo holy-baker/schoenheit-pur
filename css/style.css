@@ -24,11 +24,28 @@ a {
   line-height: 26px;
 }
 
+.text-slider{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 7px;
+}
+
+.text-hinweis{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
+
+.text h1{
+  font-family: 'Trirong', serif;
+}
+.text h1{
+  font-family: 'Trirong', serif;
+}
 .text h2{
   font-family: 'Trirong', serif;
-  /* font-weight: 400; */
-  /* font-size: 14px; */
-  line-height: 20px;
+}
+.text h3{
+  font-family: 'Trirong', serif;
 }
 
 .text p{
@@ -40,6 +57,10 @@ a {
   font-family: 'Trirong', serif;
   font-size: 20px;
   }
+
+.text2 p{
+  margin: 0px;
+}
 
 .body2{
   /* padding: 0.8rem; */
@@ -164,21 +185,6 @@ a {
   max-height: 100%;
 }
 
-
-.image1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image2{
-  position: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: auto;
-}
-
 .container{
   /* max-width: 1010px; */
   /* margin-left: auto; */
@@ -190,8 +196,8 @@ a {
   /* opacity: 0.3; */
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 25px;
   /* border: 1px solid black; */
   /* border-radius: 5px; */
   color: black;
@@ -273,6 +279,7 @@ textarea{
 
 address{
   font-style: normal;
+  text-align: center;
 }
 
 h1{
@@ -518,7 +525,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 83%;
+  top: 75%;
   transform: translateY(0%);
 }
 
@@ -528,7 +535,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 65%;
+  top: 75%;
   transform: translateY(0%);
 }
 #controls3 {
@@ -537,7 +544,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 83%;
+  top: 75%;
   transform: translateY(0%);
 }
 
@@ -716,6 +723,7 @@ th, td, caption {
   height: 40vw;
   border-radius: 5px;
 }
+
 /* Hide overlay by default */
 .overlay {
   display: none;
@@ -733,8 +741,8 @@ th, td, caption {
 .overlay img {
   width: 100%;
   height: 100%;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 95vw;
+  max-height: 95vh;
   object-fit: contain; /* Preserve aspect ratio */
 }
 
@@ -786,75 +794,6 @@ th, td, caption {
   }
 }
 
-@media screen and (max-width: 970px) and (min-width: 601px) {
-
-  #slides {
-     max-width: calc(100% - 40px);
-     margin: 0 auto;
-     font-size: medium;
-  }
-
-  #slides2 {
-    max-width: calc(100% - 40px);
-    margin: 0 auto;
-    font-size: medium;
- }
-
-  .navbar{
-    display: flex;
-    justify-content: center;
-  }
-  .navbar a.icon {
-    text-decoration: none;
-    display: block;
-    width: 100px;
-    list-style: none;
-
-    justify-content: center;
-
-  }
-  .navbar ul{
-    display: none
-  }
-
-  .navbar.responsive {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
-
-  .navbar.responsive nav ul {
-    width: 338%;
-    display:block;
-    list-style: none;
-  }
-
-  .navbar.responsive nav ul li a{
-    text-decoration: none;
-    margin-right: 100px;
-    float: none;
-  }
-
-  .navbar.responsive .icon {
-    /* position: relative;
-    right: 0;
-    top: 0; */
-
-    text-decoration: none;
-    float: none;
-
-    width: 100px;
-    display:block;
-    list-style: none;
-
-  }
-
-  .text p{
-    display: inline;
-    margin: 0px;
-  }
-}
-
 @media screen and (max-width: 600px)  {
 
   #slides {
@@ -874,7 +813,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 83%;
+  top: 75%;
   transform: translateY(0%);
   width: 94%;
   transform: translateX(3%);
@@ -884,7 +823,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 64%;
+  top: 75%;
   transform: translateY(0%);
   width: 94%;
   transform: translateX(3%);
@@ -894,7 +833,7 @@ th, td, caption {
   height: 50px;
   z-index: 3;
   position: absolute;
-  top: 83%;
+  top: 75%;
   transform: translateY(0%);
   width: 97%;
   transform: translateX(1.5%);
@@ -953,7 +892,18 @@ th, td, caption {
    margin: 0px;
  }
 
-.umbruch::after{
+ .umbruch-index::after{
+  content: '\A';
+  white-space: pre;    
+  display: block; /* Damit es als Blockelement behandelt wird */
+  padding-bottom: 0.5em; /* Fügt unten zusätzlichen Abstand hinzu */
+}
+
+ .bindestrich::after{
+  content: '-';
+}
+
+.umbruch-kontakt::after{
   content: '\A';
   white-space: pre;    
   display: block; /* Damit es als Blockelement behandelt wird */
